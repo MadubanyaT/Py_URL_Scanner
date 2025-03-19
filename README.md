@@ -19,4 +19,4 @@ To get the best out of the tool use [Pycharm IDE!](https://www.jetbrains.com/pyc
 
 ## Reach Out
 Feel free to extend your suggestions and collaboration to me:
-- **🔗 LinkedIn:** [Tshepho](www.linkedin.com/in/tshepho-madubanya-188aa3251)  
+- **🔗 LinkedIn:** [Tshepho M](www.linkedin.com/in/tshepho-madubanya-188aa3251)  
