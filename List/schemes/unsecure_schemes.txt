@@ -1,0 +1,6 @@
+http
+telnet
+time
+dns
+smb
+ldap
