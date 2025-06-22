@@ -8,26 +8,17 @@ import requests
 
 # Banner
 def banner():
-        font = """
+    print("""      
 
-                          ,--,                                                                                    
-                       ,---.'|                                                                                    
-             ,-.----.  |   | :             .--.--.                                                                
-         ,--,\    /  \ :   : |            /  /    '.                                                              
-       ,'_ /|;   :    \|   ' :           |  :  /`. /                           ,---,      ,---,           __  ,-. 
-  .--. |  | :|   | .\ :;   ; '           ;  |  |--`                        ,-+-. /  | ,-+-. /  |        ,' ,'/ /| 
-,'_ /| :  . |.   : |: |'   | |__         |  :  ;_      ,---.    ,--.--.   ,--.'|'   |,--.'|'   |  ,---. '  | |' | 
-|  ' | |  . .|   |  \ :|   | :.'|         \  \    `.  /     \  /       \ |   |  ,"' |   |  ,"' | /     \|  |   ,' 
-|  | ' |  | ||   : .  /'   :    ;          `----.   \/    / ' .--.  .-. ||   | /  | |   | /  | |/    /  '  :  /   
-:  | | :  ' ;;   | |  \|   |  ./           __ \  \  .    ' /   \__\/: . .|   | |  | |   | |  | .    ' / |  | '    
-|  ; ' |  | '|   | ;\  ;   : ;            /  /`--'  '   ; :__  ," .--.; ||   | |  |/|   | |  |/'   ;   /;  : |    
-:  | : ;  ; |:   ' | \.|   ,/            '--'.     /'   | '.'|/  /  ,.  ||   | |--' |   | |--' '   |  / |  , ;    
-'  :  `--'   :   : :-' '---'               `--'---' |   :    ;  :   .'   |   |/     |   |/     |   :    |---'     
-:  ,      .-.|   |.'                                 \   \  /|  ,     .-.'---'      '---'       \   \  /          
- `--`----'   `---'                                    `----'  `--`---'                           `----'           
-                                                                                                                
-    """
-        print(font)
+ #     # ######  #           #####   #####     #    #     # #     # ####### ######  
+ #     # #     # #          #     # #     #   # #   ##    # ##    # #       #     # 
+ #     # #     # #          #       #        #   #  # #   # # #   # #       #     # 
+ #     # ######  #           #####  #       #     # #  #  # #  #  # #####   ######  
+ #     # #   #   #                # #       ####### #   # # #   # # #       #   #   
+ #     # #    #  #          #     # #     # #     # #    ## #    ## #       #    #  
+  #####  #     # #######     #####   #####  #     # #     # #     # ####### #     #     
+######################################################################################                                                                                                                                                                                      
+    """)
 
 
 # This function will confirm if the entered URL is valid (return a boolean)
@@ -36,7 +27,7 @@ def isValid_url(url):
                "\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)$")
 
     try:
-     # Work on the online ping
+        # Work on the online ping
         if re.match(pattern, url):
             response = requests.head(url)
             if response.status_code != '404':
@@ -44,6 +35,7 @@ def isValid_url(url):
     except requests.ConnectionError:
         print('Cannot connect to the url. Try again')
         sys.exit()
+
 
 # Goes through a list(txt) of blacklisted/Suspicious URLS
 # first read the Suspicious_list.txt, then find the match on the list
@@ -64,8 +56,8 @@ def blacklisted_urls(url):
 
 
 if __name__ == '__main__':
-    print(banner())
-    
+    banner()
+
     URL = input('Enter a URL/Link: ').strip()
     URL = URL.lower()
     if isValid_url(URL):
@@ -75,7 +67,7 @@ if __name__ == '__main__':
         # This module method receives the valid URL
         r = scanner.url_scanner(URL)
         # More methods can be added here.
-        print("\nSCAN RESULTS\n", end='='*12)
+        print("\nSCAN RESULTS\n", end='=' * 12)
         if 5 <= r[1] < 10:
             print(f"\n#The rating of this URL: {r[0]} is {r[1]}. "
                   f"Therefore browse with CAUTION!{r[2]}")
