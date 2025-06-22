@@ -14,8 +14,8 @@ A simple Python tool that scans and rates URLs based on various security checks.
 5. **Final Rating** – If the rating is **< 5**, the URL is added to the blacklist. 
 
 ## Usage
-Clone or download the repository, then run the **Scanner.py** module.
-To get the best out of the tool use [Pycharm IDE!](https://www.jetbrains.com/pycharm/) 
+Clone or download the repository, then run the **Scanner.py** module. To get the best out of the tool use [Pycharm IDE!](https://www.jetbrains.com/pycharm/)  
+You might have to install some modules i.e ```pip install requests``` 
 
 ## Reach Out
 Feel free to extend your suggestions and collaboration to me:
